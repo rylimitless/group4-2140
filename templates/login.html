@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light dark">
+    <script src="https://unpkg.com/htmx.org@2.0.3" integrity="sha384-0895/pl2MU10Hqc6jd4RvrthNlDiE9U1tWmX7WRESftEDRosgxNsQG/Ze9YMRzHq" crossorigin="anonymous"></script>
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"
+  >
+    <!-- <link rel="stylesheet" href="css/pico.min.css"> -->
+    <title>Hello world!</title>
+  </head>
+  <body>
+    <main class="container">
+
+      <p> Please enter your email and password in order to login </p>
+      <h3>Login</h3>
+      <form>
+        <fieldset class="grid">
+          <input 
+            name="login"
+            placeholder="Login"
+            aria-label="Login"
+            autocomplete="username"
+            required
+          />
+          <input
+            type="password"
+            name="password"
+            placeholder="Password"
+            aria-label="Password"
+            autocomplete="current-password"
+            required
+          />
+          <input
+            type="submit"
+            value="Log in"
+          />
+        </fieldset>
+      </form>
+      <h2> This works {{name}}</h2>
+      <p> Sign in instead </p>
+
+    </main>
+  </body>
+</html>
