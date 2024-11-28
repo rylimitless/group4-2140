@@ -21,7 +21,17 @@ def createDB():
 	phone TEXT NOT NULL UNIQUE);
                  """)
     
+    
+def check_for_available_dates():
+    global conn
+    cursor = conn.execute("SELECT * FROM dates")
+    for row in cursor:
+        print(row)
 
+
+# @app.route("/data")
+# def choose_date():
+    
 
 @app.route('/')
 def hello():
