@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template , request
 
 import sqlite3
 
@@ -33,7 +33,7 @@ def check_for_available_dates():
 # def choose_date():
     
 
-@app.route('/')
+@app.route('/booking')
 def hello():
     createDB()
     return render_template('index.html',name="Ry")
@@ -43,4 +43,15 @@ def hello():
 def login():
     return render_template('login.html')
 
-app.run()
+@app.route('/events')
+def events():
+    return render_template('events.html')
+
+@app.route('/date',methods=['POST'])
+def home():
+    print("Hello")
+    date = request.form.get("datetime")
+    print(date)
+    # return render_template("")
+
+app.run(debug=True)

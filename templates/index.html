@@ -28,8 +28,81 @@
             </ul>
           </nav>
 
-      <h1>Hello world!</h1>
-      <h2> This works {{name}}</h2>
+          <h1>Welcome to Booking</h1>
+          <p> Fill out the below information to book a session with one of our stylists</p>
+
+
+          <div class="grid">
+
+            <div>
+              <img src ="makeup1.jpg">
+            </div>
+            
+            
+ 
+          <div> 
+            <div> 
+
+              <div> 
+                <p> Select a desired date and time for your appointment. Please note that this time may not be available of circumstances may arise. </p>
+              </div>
+    
+              <div id="date1">
+                <input type="datetime-local" name="datetime" aria-label="Datetime local" 
+                hx-post="/date" hx-trigger="change" hx-target="#swap-date">
+
+              </div>
+    
+              <div id="swap-date"> 
+    
+              </div>
+          </div>                   
+        </div>
+
+        </div>
+        <div id="continue" style="padding-top:80px;" class="grid">
+          
+          <!-- <h3>Booking Continuation</h3> -->
+
+          <div>
+            <form>
+              <fieldset>
+                <label>
+                 Requested Service
+                  <input 
+                name="reason"
+                required
+                placeholder="Please enter a reason for booking"
+                aria-label="Reason for booking"
+             />
+                </label>
+             
+               <label>
+                <em> Optional </em>
+                <textarea
+                name="bio"
+                placeholder="Leave a short comment..."
+                aria-label="Professional short bio"
+              >
+              </textarea>
+               </label>
+              </fieldset>
+            
+              <input
+                type="submit"
+                value="Book"
+              />
+            </form>
+          </div>
+
+          <div>
+            <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.flaticon.com%2Ffree-icon%2Fbooking-app_6556135&psig=AOvVaw31iqz7Y0hBE5BBfHZ8Jyd_&ust=1732925803665000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCPje2uuhgIoDFQAAAAAdAAAAABAJ">
+            <!-- <p> Please complete the form to the left to finish your booking. Your selected artist will reach out to you to confirm in a short order. You are free to cancel your booking after it's made </p> -->
+          </div>
+            
+    
+        </div>
+
     </main>
     </div>
   </body>
