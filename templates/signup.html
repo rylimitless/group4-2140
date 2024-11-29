@@ -6,19 +6,21 @@
     <meta name="color-scheme" content="light dark">
     <script src="https://unpkg.com/htmx.org@2.0.3" integrity="sha384-0895/pl2MU10Hqc6jd4RvrthNlDiE9U1tWmX7WRESftEDRosgxNsQG/Ze9YMRzHq" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
-    <title>Login</title>
+    <title>Sign Up</title>
   </head>
   <body>
     <main class="container">
-      <h3>Login</h3>
-      <form method="POST" action="/login">
+      <h3>Sign Up</h3>
+      <form method="POST" action="/signup">
         <fieldset class="grid">
-          <input name="login" placeholder="Email" type="email" required />
+          <input name="first_name" placeholder="First Name" required />
+          <input name="last_name" placeholder="Last Name" required />
+          <input name="email" placeholder="Email" type="email" required />
           <input type="password" name="password" placeholder="Password" required />
-          <input type="submit" value="Log in" />
+          <input type="password" name="confirm_password" placeholder="Confirm Password" required />
+          <input type="submit" value="Sign Up" />
         </fieldset>
       </form>
-      <p>Don't have an account? <a href="/signup">Sign up here</a></p>
     </main>
   </body>
 </html>

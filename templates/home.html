@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light dark">
+    <script src="https://unpkg.com/htmx.org@2.0.3" integrity="sha384-0895/pl2MU10Hqc6jd4RvrthNlDiE9U1tWmX7WRESftEDRosgxNsQG/Ze9YMRzHq" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+    <script src="https://unpkg.com/htmx.org@2.0.3" integrity="sha384-0895/pl2MU10Hqc6jd4RvrthNlDiE9U1tWmX7WRESftEDRosgxNsQG/Ze9YMRzHq" crossorigin="anonymous"></script>
+
+    <title>{{ name }}'s Dashboard</title>
+  </head>
+  <body>
+    <main class="container">
+      <div id="home">
+        <nav>
+          <ul>
+            <li><strong><a href="/logout">Logout</a></strong></li>
+          </ul>
+          <ul>
+            <li><a href="#">Consultations</a></li>
+            <li><a hx-get="/booking" hx-push-url="true" hx-target="#home">Bookings</a></li>
+            <li><a href="/portfolio">Showcase</a></li> 
+            <li><a href="/events">Events</a></li>
+          </ul>
+        </nav>
+        <h1>Welcome to Glam Rock J.A, {{ name }}!</h1>
+        <h2>Makeup Services</h2>
+      </div>
+    </main>
+  </body>
+</html>

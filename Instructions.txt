@@ -1,0 +1,2 @@
+Install all required dependencies listed in the requirements.txt file. Run this following command:
+pip install -r requirements.txt

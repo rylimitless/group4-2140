@@ -33,7 +33,7 @@
 <body>
     <div class="container my-4">
         <h1 class="text-center">Upload Portfolio</h1>
-        <form method="POST" action="{{ url_for('upload') }}" enctype="multipart/form-data" class="mt-4">
+        <form method="POST" action="{{ url_for('portfolio_upload') }}" enctype="multipart/form-data" class="mt-4">
             {{ form.hidden_tag() }}
             <div class="mb-3">
                 <label for="title" class="form-label">Title:</label>
@@ -55,7 +55,7 @@
                 <p id="file-name" class="file-name"></p>
             </div>
             <button type="submit" class="btn btn-success">Upload</button>
-            <a href="{{ url_for('index') }}" class="btn btn-secondary">Back</a>
+            <a href="{{ url_for('portfolio_index') }}" class="btn btn-secondary">Back</a>
         </form>
     </div>
     <script>

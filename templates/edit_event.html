@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light dark">
+    <script src="https://unpkg.com/htmx.org@2.0.3" integrity="sha384-0895/pl2MU10Hqc6jd4RvrthNlDiE9U1tWmX7WRESftEDRosgxNsQG/Ze9YMRzHq" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+    <title>Edit Event</title>
+  </head>
+  <body>
+    <main class="container">
+      <h1>Edit Event</h1>
+
+      <!-- Form to edit the event -->
+      <form method="POST">
+        <input type="text" name="makeup_artist_name" placeholder="Makeup Artist Name" value="{{ event.makeup_artist_name }}" required>
+        <input type="text" name="location" placeholder="Location" value="{{ event.location }}" required>
+        <input type="datetime-local" name="event_date_time" value="{{ event.date.strftime('%Y-%m-%dT%H:%M') }}" required>
+        <input type="text" name="event_name" placeholder="Event Name" value="{{ event.name }}" required>
+        <button type="submit">Save Changes</button>
+      </form>
+    </main>
+  </body>
+</html>

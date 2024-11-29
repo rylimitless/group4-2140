@@ -29,7 +29,12 @@
             </div>
 
             <button type="submit" class="btn btn-success">Save Changes</button>
-            <a href="{{ url_for('index') }}" class="btn btn-secondary">Back</a>
+            <a href="{{ url_for('portfolio_index') }}" class="btn btn-secondary">Back</a>
+        </form>
+
+        <!-- Delete Form (POST) -->
+        <form action="{{ url_for('portfolio_delete', item_id=item.id) }}" method="POST">
+            <button type="submit" class="btn btn-danger">Delete</button>
         </form>
     </div>
 </body>
