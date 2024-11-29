@@ -1,5 +1,13 @@
 :root{
     --product: #04aaff;
+    --p_bg: #14141c;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    font-family: 'Roboto', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body{
@@ -7,15 +15,17 @@ body{
 }
 
 .products{
+    padding: 10px;
+    margin: 5px;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     grid-auto-rows: 250px;
     gap: 2rem;
     grid-row: 1/3;
 }
 
 .product{
-    background-color: white;
+    background-color: var(--p_bg);
     padding-top: 40px;
     padding-left: 20px;
     padding-right: 20px;
@@ -37,4 +47,18 @@ body{
     display: flex;
     flex-direction: column;
     color: #87817c;
+}
+
+.product .icons{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 15px;
+    cursor: pointer;
+    filter: invert(1);
+}
+
+.product_icon{
+    height: 1.5rem;
+    width: 1.5rem;
 }
