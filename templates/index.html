@@ -22,9 +22,11 @@
             </ul>
             <ul>
             <li> <a hx-get="/login" hx-push-url="true" hx-target="#home"> Login </li>
+              <li><a href="#">Booking</a></li>
+              <li><a hx-get="/bookings" hx-push-url="true" hx-target="#home">My Dashboard</a></li>
               <li><a href="#">About</a></li>
               <li><a href="#">Services</a></li>
-              <li><a href="#">Products</a></li>
+              <li><a href="/templates/product.html">Products</a></li>
             </ul>
           </nav>
 
@@ -35,11 +37,10 @@
           <div class="grid">
 
             <div>
-              <img src ="makeup1.jpg">
+              <img src="{{ url_for('static', filename='images/makeup1.jpg') }}" alt="Makeup Image">
+
             </div>
             
-            
- 
           <div> 
             <div> 
 
@@ -50,22 +51,16 @@
               <div id="date1">
                 <input type="datetime-local" name="datetime" aria-label="Datetime local" 
                 hx-post="/date" hx-trigger="change" hx-target="#swap-date">
-
               </div>
-    
               <div id="swap-date"> 
-    
               </div>
           </div>                   
         </div>
-
         </div>
         <div id="continue" style="padding-top:80px;" class="grid">
-          
           <!-- <h3>Booking Continuation</h3> -->
-
           <div>
-            <form>
+            <form hx-post="/register" hx-target="#response1">
               <fieldset>
                 <label>
                  Requested Service
@@ -76,11 +71,38 @@
                 aria-label="Reason for booking"
              />
                 </label>
+
+                <details class="dropdown">
+                  <summary>
+                    Select an artist
+                  </summary>
+                  <ul>
+                    <li>    print(s)
+
+                      <label>
+                        <input type="radio" name="phase" value="Arora" />
+                        Arora
+                      </label>
+                    </li>
+                    <li>
+                      <label>
+                        <input type="radio" name="phase" value="Lara" />
+                        Lara
+                      </label>
+                    </li>
+                    <li>
+                      <label>
+                        <input type="radio" name="phase" value="Manny" />
+                        Manny
+                      </label>
+                    </li>
+                  </ul>
+                </details>
              
                <label>
-                <em> Optional </em>
+                 Comment <em> (Optional) </em>
                 <textarea
-                name="bio"
+                name="comment"
                 placeholder="Leave a short comment..."
                 aria-label="Professional short bio"
               >
@@ -93,10 +115,16 @@
                 value="Book"
               />
             </form>
+
+            <div id="response1">
+              
+            </div>
           </div>
 
+
           <div>
-            <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.flaticon.com%2Ffree-icon%2Fbooking-app_6556135&psig=AOvVaw31iqz7Y0hBE5BBfHZ8Jyd_&ust=1732925803665000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCPje2uuhgIoDFQAAAAAdAAAAABAJ">
+            <img src="{{ url_for('static', filename='images/book2.png') }}" alt="Makeup Image">
+            
             <!-- <p> Please complete the form to the left to finish your booking. Your selected artist will reach out to you to confirm in a short order. You are free to cancel your booking after it's made </p> -->
           </div>
             

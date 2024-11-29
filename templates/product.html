@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light dark">
+    <script src="https://unpkg.com/htmx.org@2.0.3" integrity="sha384-0895/pl2MU10Hqc6jd4RvrthNlDiE9U1tWmX7WRESftEDRosgxNsQG/Ze9YMRzHq" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+    <link rel="stylesheet" href="/product_style/p_style.css">
+    <!-- <link rel="stylesheet" href="css/pico.min.css"> -->
+     <script src="/product_backend/product.js"></script>
+    <title>Glam Lock J.A Products</title>
+  </head>
+  <body>
+    <main class="container">
+    <div id="home">
+        <nav>
+            <ul>
+              <li><strong>Glam Lock J.A</strong></li>
+            </ul>
+            <ul>
+            <li> <a hx-get="/login" hx-push-url="true" hx-target="#home"> Login </li>
+                <li><a href="/templates/index.html">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+            </ul>
+          </nav>
+      <h1>Welcome to the Product Page!</h1>
+      <h2> These are all the products offered.</h2>
+
+      <div class="products">
+
+        <div class="product" id="p_1">
+            <div class="product-content">
+                <img src="/images/softglam.jpeg" alt="">
+              <div class="product_title">
+                <h5>Soft Glam</h5>
+              </div>
+              <div class="product_description">
+                <p>
+                    Soft glam makeup is something between full glam and natural makeup look.
+                </p>
+              </div>
+            </div>
+          </div>
+    
+          <div class="product" id="p_2">
+            <div class="product-content">
+                <img src="/images/fullglam.jpeg" alt="">
+              <div class="product_title">
+                <h5>Full Glam</h5>
+              </div>
+              <div class="product_description">
+                <p>
+                    Full glam makeup is one that highlights and enhance your natural features and would be considered as heavy makeup with multiple layers of sculpting and baking. 
+                </p>
+              </div>
+            </div>
+          </div>
+    
+          <div class="product" id="p_3">
+            <div class="product-content">
+                <img src="/images/gradglam.jpeg" alt="">
+              <div class="product_title">
+                <h5>Grad Glam</h5>
+              </div>
+              <div class="product_description">
+                <p>
+                    This is essentially a Soft Glam.
+                </p>
+              </div>
+            </div>
+          </div>
+    
+          <div class="product" id="p_4">
+            <div class="product-content">
+                <img src="/images/naturalglam.jpeg" alt="">
+              <div class="product_title">
+                <h5>Natural Glam</h5>
+              </div>
+              <div class="product_description">
+                <p>
+                    This can sometimes be described as “No-Makeup Makeup” This look defines your features without major changes, sculpting, or colors.
+              </div>
+            </div>
+          </div>
+    
+          <div class="product" id="p_5">
+            <div class="product-content">
+                <img src="/images/malebeat.jpeg" alt="">
+              <div class="product_title">
+                <h5>Male Beat</h5>
+              </div>
+              <div class="product_description">
+                <p>
+                    This includes concealing and lining up the hairline as well as applying light foundation, and powder.
+                </p>
+              </div>
+            </div>
+          </div>
+          
+      </div>    
+
+
+      <h4>Recommendations</h4>
+      <div class="recommendations_box">
+        <h5>We recommend...</h5>
+        <div class="products">
+
+            <div class="product" id="pr_1">
+                <div class="product-content">
+                    <div class="product_title">
+                      <h5>Grad Glam</h5>
+                    </div>
+                    <div class="product_description">
+                      <p>
+                          This is essentially a Soft Glam.
+                      </p>
+                    </div>
+                  </div>
+                <div class="icons">
+                    <img class="product_icon thumbs-up" src="/icons/thumb-up.svg">
+                    <img class="product_icon thumbs-down" src="/icons/thumb-down.svg">
+                </div>
+            </div>
+
+            <div class="product" id="pr_2">
+                <div class="product-content">
+                    <div class="product-content">
+                        <div class="product_title">
+                          <h5>Soft Glam</h5>
+                        </div>
+                        <div class="product_description">
+                          <p>
+                              Soft glam makeup is something between full glam and natural makeup look.
+                          </p>
+                        </div>
+                      </div>
+              </div>
+              <div class="icons">
+                <img class="product_icon thumbs-up" src="/icons/thumb-up.svg">
+                <img class="product_icon thumbs-down" src="/icons/thumb-down.svg">
+            </div>
+
+        </div>
+
+        <div class="product" id="pr_3">
+            <div class="product-content">
+                <div class="product-content">
+                    <div class="product_title">
+                      <h5>Full Glam</h5>
+                    </div>
+                    <div class="product_description">
+                      <p>
+                          Full glam makeup is one that highlights and enhance your natural features and would be considered as heavy makeup with multiple layers of sculpting and baking. 
+                      </p>
+                    </div>
+                  </div>
+            </div>
+            <div class="icons">
+                <img class="product_icon thumbs-up" src="/icons/thumb-up.svg">
+                <img class="product_icon thumbs-down" src="/icons/thumb-down.svg">
+            </div>
+          </div>
+
+      </div>
+    </main>
+    </div>
+  </body>
+</html>
