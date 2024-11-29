@@ -1,6 +1,7 @@
 :root{
     --product: #04aaff;
     --p_bg: #14141c;
+    --pr_bg: #0c1c2c;
 }
 
 *{
@@ -19,7 +20,7 @@ body{
     margin: 5px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-auto-rows: 250px;
+    grid-auto-rows: auto;
     gap: 2rem;
     grid-row: 1/3;
 }
@@ -61,4 +62,19 @@ body{
 .product_icon{
     height: 1.5rem;
     width: 1.5rem;
+}
+
+.recommendations_box{
+    background-color: var(--pr_bg);
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 5px rgb(0 0 0 / 0.2);
+}
+
+img{
+    height: 150px;
+    width: 150px;
+    border: white;
+    border-radius: 10px;
+    margin-bottom: 5px;
 }
